@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Table } from "reactstrap";
-import { getMaterial } from "../../data/materialsData";
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { Table } from "reactstrap"
+import { getMaterial } from "../../data/materialsData"
 
 export default function MaterialDetails() {
-  const { id } = useParams();
+  const { id } = useParams()
 
-  const [material, setMaterial] = useState(null);
+  const [material, setMaterial] = useState(null)
 
   //add useEffect here to get the ticket details from the API
   useEffect(() => {
-    getMaterial(id).then(setMaterial);
-  }, []);
+    getMaterial(id).then(setMaterial)
+  }, [])
 
   if (!material) {
-    return null;
+    return null
   }
 
   return (
@@ -67,5 +67,5 @@ export default function MaterialDetails() {
         <p>No checkouts for this material</p>
       )}
     </div>
-  );
+  )
 }

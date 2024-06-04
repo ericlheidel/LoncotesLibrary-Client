@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
 
 export default defineConfig(() => {
   return {
@@ -7,7 +7,7 @@ export default defineConfig(() => {
       open: true,
       proxy: {
         "/api": {
-          target: "https://localhost:5001",
+          target: "http://localhost:5001",
           changeOrigin: true,
           secure: false,
         },
@@ -17,5 +17,5 @@ export default defineConfig(() => {
       outDir: "build",
     },
     plugins: [react()],
-  };
-});
+  }
+})

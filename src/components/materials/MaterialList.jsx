@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import { Table } from "reactstrap";
-import { getMaterials } from "../../data/materialsData";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { Table } from "reactstrap"
+import { getMaterials } from "../../data/materialsData"
+import { Link } from "react-router-dom"
 
 export default function MaterialList() {
-  const [materials, setMaterials] = useState([]);
+  const [materials, setMaterials] = useState([])
 
   useEffect(() => {
-    getMaterials().then(setMaterials);
-  }, []);
+    getMaterials().then(setMaterials)
+  }, [])
 
   return (
     <div className="container">
@@ -41,5 +41,5 @@ export default function MaterialList() {
         </tbody>
       </Table>
     </div>
-  );
+  )
 }
